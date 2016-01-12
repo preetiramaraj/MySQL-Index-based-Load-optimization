@@ -10,7 +10,9 @@ sudo apt-get install libncurses5-dev
 sudo apt-get install flex bison
 sudo apt-get update
 
-Navigate inside MYSQL-Index-based-Load-Optimization folder from the extracted zip file.
+download source code from: https://github.com/preetiramaraj/MySQL-Index-based-Load-optimization
+
+download the zip file and extract it in your Desktop
 
 follow official documentation instructions at: http://dev.mysql.com/doc/internals/en/guided-tour-majordir-build.html to build and install mysql
 
