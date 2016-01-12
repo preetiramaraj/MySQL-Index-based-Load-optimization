@@ -1,0 +1,1 @@
+cd /home/preeti/mysql-server && '/usr/bin/cpack' -G TGZ --config CPackConfig.cmake

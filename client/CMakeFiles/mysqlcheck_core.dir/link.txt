@@ -1,0 +1,2 @@
+/usr/bin/ar cr libmysqlcheck_core.a  CMakeFiles/mysqlcheck_core.dir/check/mysqlcheck_core.cc.o
+/usr/bin/ranlib libmysqlcheck_core.a

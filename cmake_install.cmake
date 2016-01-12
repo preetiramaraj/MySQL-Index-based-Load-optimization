@@ -1,0 +1,142 @@
+# Install script for directory: /home/preeti/mysql-server
+
+# Set the install prefix
+IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
+  SET(CMAKE_INSTALL_PREFIX "/usr/local/mysql")
+ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
+STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
+
+# Set the install configuration name.
+IF(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
+  IF(BUILD_TYPE)
+    STRING(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
+           CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
+  ELSE(BUILD_TYPE)
+    SET(CMAKE_INSTALL_CONFIG_NAME "Debug")
+  ENDIF(BUILD_TYPE)
+  MESSAGE(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
+ENDIF(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
+
+# Set the component getting installed.
+IF(NOT CMAKE_INSTALL_COMPONENT)
+  IF(COMPONENT)
+    MESSAGE(STATUS "Install component: \"${COMPONENT}\"")
+    SET(CMAKE_INSTALL_COMPONENT "${COMPONENT}")
+  ELSE(COMPONENT)
+    SET(CMAKE_INSTALL_COMPONENT)
+  ENDIF(COMPONENT)
+ENDIF(NOT CMAKE_INSTALL_COMPONENT)
+
+# Install shared libraries without execute permission?
+IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
+  SET(CMAKE_INSTALL_SO_NO_EXE "1")
+ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
+
+IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Info")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/docs" TYPE FILE OPTIONAL FILES "/home/preeti/mysql-server/Docs/mysql.info")
+ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Info")
+
+IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Readme")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE FILE OPTIONAL FILES
+    "/home/preeti/mysql-server/COPYING"
+    "/home/preeti/mysql-server/LICENSE.mysql"
+    )
+ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Readme")
+
+IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Readme")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE FILE FILES "/home/preeti/mysql-server/README")
+ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Readme")
+
+IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/docs" TYPE FILE FILES
+    "/home/preeti/mysql-server/Docs/INFO_SRC"
+    "/home/preeti/mysql-server/Docs/INFO_BIN"
+    )
+ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+
+IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Readme")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE FILE FILES "/home/preeti/mysql-server/Docs/INSTALL-BINARY")
+ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Readme")
+
+IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Documentation")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/docs" TYPE DIRECTORY FILES "/home/preeti/mysql-server/Docs/" REGEX "/INSTALL\\-BINARY$" EXCLUDE REGEX "/Makefile\\.[^/]*$" EXCLUDE REGEX "/glibc[^/]*$" EXCLUDE REGEX "/linuxthreads\\.txt$" EXCLUDE REGEX "/myisam\\.txt$" EXCLUDE REGEX "/mysql\\.info$" EXCLUDE REGEX "/sp\\-imp\\-spec\\.txt$" EXCLUDE)
+ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Documentation")
+
+IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  INCLUDE("/home/preeti/mysql-server/zlib/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/extra/yassl/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/extra/yassl/taocrypt/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/cmd-line-utils/libedit/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/storage/perfschema/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/storage/myisam/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/storage/partition/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/storage/federated/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/storage/myisammrg/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/storage/example/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/storage/archive/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/storage/heap/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/storage/innobase/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/storage/ndb/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/storage/blackhole/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/storage/csv/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/plugin/audit_null/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/plugin/rewrite_example/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/plugin/fulltext/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/plugin/innodb_memcached/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/plugin/password_validation/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/plugin/replication_observers_example/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/plugin/auth/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/plugin/test_service_sql_api/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/plugin/daemon_example/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/plugin/semisync/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/plugin/version_token/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/plugin/test_services/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/plugin/rewriter/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/include/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/dbug/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/strings/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/vio/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/regex/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/mysys/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/mysys_ssl/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/libmysql/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/libbinlogevents/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/libbinlogstandalone/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/unittest/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/unittest/examples/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/unittest/mytap/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/unittest/mytap/t/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/unittest/gunit/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/extra/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/client/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/sql/share/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/libservices/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/man/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/testclients/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/sql/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/libmysqld/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/libmysqld/examples/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/scripts/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/mysql-test/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/mysql-test/lib/My/SafeProcess/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/support-files/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/packaging/rpm-oel/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/packaging/rpm-fedora/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/packaging/rpm-sles/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/packaging/rpm-docker/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/packaging/WiX/cmake_install.cmake")
+  INCLUDE("/home/preeti/mysql-server/packaging/solaris/cmake_install.cmake")
+
+ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
+
+IF(CMAKE_INSTALL_COMPONENT)
+  SET(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
+ELSE(CMAKE_INSTALL_COMPONENT)
+  SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
+ENDIF(CMAKE_INSTALL_COMPONENT)
+
+FILE(WRITE "/home/preeti/mysql-server/${CMAKE_INSTALL_MANIFEST}" "")
+FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
+  FILE(APPEND "/home/preeti/mysql-server/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+ENDFOREACH(file)
